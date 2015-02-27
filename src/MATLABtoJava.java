@@ -25,8 +25,43 @@ import javafx.stage.FileChooser;
 import javafx.stage.Window;
 
 /**
- * Simple program to convert MATLAB syntax to 
- *
+ * Simple program to convert MATLAB syntax to Java.
+ * The program is far from perfect, but it attempts to perform the most repetitive
+ * tasks such as converting
+ * <UL style="list-style: none; ">
+ * <LI> <CODE>if...then...else ... end</CODE> 
+ * <BR>to
+ * <LI><CODE> if (...) { ... } </CODE>
+ * </UL>
+ * MATLABtoJava performs the following conversions, doing its best to honor parentheses
+ * and to work on code but not on comments.
+ * <UL>
+ * <LI> Function and class definitions are translated to a reasonable extent to Java syntax
+ * <LI> Errors & warnings are translated to Java Exceptions
+ * <LI> assert syntax is converted.
+ * <LI> <CODE> if/elseif/else/end, switch/case/otherwise/end, for/next, while/end, try/catch</CODE> are translated
+ * </UL>
+ * <BR> A variety of other syntactical changes, including:
+ * <TABLE border="1">
+ * <TR><TD>MATLAB</TD> <TD>Java </TD> <TD>Comment      </TD></TR>
+ * <TR><TD>%%     </TD> <TD>//---- </TD><TD>section breaks</TD></TR>
+ * <TR><TD>%     </TD> <TD>// </TD><TD>end-of-line comments</TD></TR>
+ * <TR><TD>...   </TD> <TD>     </TD><TD>line continuation</TD></TR>
+ * <TR><TD>x'     </TD> <TD>x.transpose() </TD><TD>transpose operator *</TD></TR>
+ * <TR><TD>'x'     </TD> <TD>"x" </TD><TD>string constants</TD></TR>
+ * <TR><TD>'"'     </TD> <TD>"\"" </TD><TD>literal double quotes</TD></TR>
+ * <TR><TD>~     </TD> <TD>!   </TD> <TD>NOT operator</TD></TR>
+ * <TR><TD>xx{n} </TD> <TD>xx[n]</TD><TD>Indexing</TD></TR>
+ * <TR><TD>[]     </TD> <TD>null </TD><TD>empty array</TD></TR>
+ * <TR><TD>numel(x)     </TD> <TD>x.length </TD><TD>array length</TD></TR>
+ * <TR><TD>length(x)     </TD> <TD>x.length </TD><TD>array length</TD></TR>
+ * <TR><TD>size(x, n)     </TD> <TD>x.dim(n) </TD><TD>array dimension size *</TD></TR>
+ * <TR><TD>isempty(x)     </TD> <TD>x.isEmpty() </TD><TD>array empty *</TD></TR>
+ * <TR><TD>sprintf(x)     </TD> <TD>String.format(x) </TD><TD>convert to string</TD></TR>
+ * <TR><TD>a = [1, 2, 3]     </TD> <TD>a = {1, 2, 3} </TD><TD>array declaration</TD></TR>
+ * <TR><TD>isa(a, "class")     </TD> <TD>a instanceof "class" </TD><TD>class membership</TD></TR>
+ * </TABLE>
+ * (* Assumes a java Matrix class with the defined methods.)
  * @author Ari
  */
 public class MATLABtoJava /* extends Application*/ {
