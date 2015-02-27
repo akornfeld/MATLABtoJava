@@ -1,0 +1,93 @@
+/1mm Fiber.java
+/Count-Dependent Nonlinearity.java
+/expand_wildcards.java
+/ASD FieldSpec analysis.java
+/averageTrials.java
+/delete_cols.java
+/ULS3648.java
+/air_mass.java
+/Ocean Optics failure.java
+/specMeans.java
+/temp.java
+/hascolumn.java
+/test_avantes.java
+/align_spectra.java
+/emptyOK.java
+/dark-adapted analysis.java
+/datatip_date.java
+/delete_rows.java
+/Blue Filters and ASD comparison.java
+/offlegend.java
+/SIFmeans.java
+/test_TH.java
+/SIFviewer.java
+/Reflectance and tranmittance spectra.java
+/scratch.java
+/solar_zenith.java
+/MxV.java
+/LICOR-SIF.java
+/vac2air.java
+/buggy.java
+/Ocean Optics first eval.java
+/discards.java
+/PRI.java
+/testMultipleMeas.java
+/SIF lawn.java
+/testnotify.java
+/Spectrometer.java
+/del_spectra.java
+/gaussFilt.java
+/5 micron fiber.java
+/tungsten_spectrum.java
+/convolvedSolar.java
+/xSpect.java
+/move_line.java
+/classifySpectra.java
+/readOO_file.java
+/writeAvantesFile.java
+/Calibration part 2.java
+/testfun.java
+/Solar component spectra.java
+/datatip_sigfigs.java
+/delete_spectra.java
+/indoors.java
+/utility_fns.java
+/Dark signal issues.java
+/fitCountsPoly.java
+/iif.java
+/readAvantesFile.java
+/aair_mass.java
+/readxSpectFile.java
+/OOtoAvantes.java
+/NLcorrect_spec_counts.java
+/NamedArray.java
+/readASD.java
+/myIcons.java
+/tapply.java
+/abline.java
+/Zeroing.java
+/Varying fluorescence.java
+/getAr.java
+/Solar measured spectra.java
+/SIF automation.java
+/counts_per_sec.java
+/count2intens.java
+/Calibration issues.java
+/writexSpectFile.java
+/h5getNextRowSpec.java
+/testClass.java
+/SIFomat.java
+/Fluorescence fitting.java
+/h5WriteStrings.java
+/emptyOrEval.java
+/myStaticData.java
+/PRI compression explorations.java
+/h5ReadStrings.java
+/linearity_test.java
+/Ocean Optics tests.java
+/avantes.java
+/reflectance.java
+/fixFilterLeak.java
+/uiputfile_A.java
+/summarizeAvantes.java
+/selectRanges.java
